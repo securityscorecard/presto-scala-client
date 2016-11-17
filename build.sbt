@@ -27,8 +27,14 @@ description := "A Scala client for the Presto SQL engine"
 
 homepage := Some(url("https://github.com/nezihyigitbasi/presto-scala-client"))
 
+resolvers ++= Seq(Resolver.sonatypeRepo("releases"),
+    Resolver.sonatypeRepo("snapshots"),
+    Resolver.bintrayRepo("scalaz", "releases"),
+    Resolver.bintrayRepo("megamsys", "scala"))
+
+
 libraryDependencies ++= Seq(
-  "com.stackmob" %% "newman" % "1.3.5",
+  "io.megam" %% "newman" % "1.3.12",
   "com.facebook.presto" % "presto-client" % "0.114",
   "com.typesafe.scala-logging" % "scala-logging-slf4j_2.10" % "2.1.2",
   "org.slf4j" % "slf4j-api" % "1.7.1",
@@ -69,4 +75,3 @@ publishTo := {
   else
     Some("releases"  at nexus + "service/local/staging/deploy/maven2")
 }
-
