@@ -19,9 +19,11 @@ sonatypeSettings
 
 name := "presto-scala-client"
 
+scalaVersion := "2.11.8"
+
 organization := "com.github.nezihyigitbasi"
 
-version := "0.2"
+version := "0.3"
 
 description := "A Scala client for the Presto SQL engine"
 
@@ -36,11 +38,11 @@ resolvers ++= Seq(Resolver.sonatypeRepo("releases"),
 libraryDependencies ++= Seq(
   "io.megam" %% "newman" % "1.3.12",
   "com.facebook.presto" % "presto-client" % "0.114",
-  "com.typesafe.scala-logging" % "scala-logging-slf4j_2.10" % "2.1.2",
+  "com.typesafe.scala-logging" % "scala-logging-slf4j_2.11" % "2.1.2",
   "org.slf4j" % "slf4j-api" % "1.7.1",
   "org.slf4j" % "log4j-over-slf4j" % "1.7.1",  // for any java classes looking for this
   "ch.qos.logback" % "logback-classic" % "1.0.3",
-  "org.scalatest" % "scalatest_2.10" % "2.2.2" % "test"
+  "org.scalatest" % "scalatest_2.11" % "2.2.4" % "test"
 )
 
 publishMavenStyle := true
