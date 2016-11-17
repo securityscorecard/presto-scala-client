@@ -37,7 +37,7 @@ resolvers ++= Seq(Resolver.sonatypeRepo("releases"),
 
 libraryDependencies ++= Seq(
   "io.megam" %% "newman" % "1.3.12",
-  "com.facebook.presto" % "presto-client" % "0.114",
+  "com.facebook.presto" % "presto-client" % "0.157",
   "com.typesafe.scala-logging" % "scala-logging-slf4j_2.11" % "2.1.2",
   "org.slf4j" % "slf4j-api" % "1.7.1",
   "org.slf4j" % "log4j-over-slf4j" % "1.7.1",  // for any java classes looking for this
