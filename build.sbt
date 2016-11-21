@@ -49,7 +49,7 @@ publishMavenStyle := true
 
 pomIncludeRepository := { _ => false }
 
-pomExtra :=
+pomExtra := (
         <licenses>
           <license>
             <name>Apache 2</name>
@@ -66,7 +66,7 @@ pomExtra :=
             <name>Nezih Yigitbasi</name>
             <url>http://github.com/nezihyigitbasi</url>
           </developer>
-        </developers>
+        </developers>)
 
 publishArtifact in Test := false
 
