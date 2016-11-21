@@ -42,7 +42,7 @@ libraryDependencies ++= Seq(
   "org.slf4j" % "slf4j-api" % "1.7.1",
   "org.slf4j" % "log4j-over-slf4j" % "1.7.1",  // for any java classes looking for this
   "ch.qos.logback" % "logback-classic" % "1.0.3",
-  "org.scalatest" % "scalatest_2.11" % "2.2.4" % "test"
+  "org.scalatest" %% "scalatest" % "2.2.4" % "test"
 )
 
 publishMavenStyle := true
@@ -77,3 +77,4 @@ publishTo := {
   else
     Some("releases"  at nexus + "service/local/staging/deploy/maven2")
 }
+
