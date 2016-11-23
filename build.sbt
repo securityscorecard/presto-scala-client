@@ -19,29 +19,37 @@ sonatypeSettings
 
 name := "presto-scala-client"
 
+scalaVersion := "2.11.8"
+
 organization := "com.github.nezihyigitbasi"
 
-version := "0.2"
+version := "0.3"
 
 description := "A Scala client for the Presto SQL engine"
 
 homepage := Some(url("https://github.com/nezihyigitbasi/presto-scala-client"))
 
+resolvers ++= Seq(Resolver.sonatypeRepo("releases"),
+    Resolver.sonatypeRepo("snapshots"),
+    Resolver.bintrayRepo("scalaz", "releases"),
+    Resolver.bintrayRepo("megamsys", "scala"))
+
+
 libraryDependencies ++= Seq(
-  "com.stackmob" %% "newman" % "1.3.5",
-  "com.facebook.presto" % "presto-client" % "0.114",
-  "com.typesafe.scala-logging" % "scala-logging-slf4j_2.10" % "2.1.2",
+  "io.megam" %% "newman" % "1.3.12",
+  "com.facebook.presto" % "presto-client" % "0.157",
+  "com.typesafe.scala-logging" % "scala-logging-slf4j_2.11" % "2.1.2",
   "org.slf4j" % "slf4j-api" % "1.7.1",
   "org.slf4j" % "log4j-over-slf4j" % "1.7.1",  // for any java classes looking for this
   "ch.qos.logback" % "logback-classic" % "1.0.3",
-  "org.scalatest" % "scalatest_2.10" % "2.2.2" % "test"
+  "org.scalatest" %% "scalatest" % "2.2.4" % "test"
 )
 
 publishMavenStyle := true
 
 pomIncludeRepository := { _ => false }
 
-pomExtra :=
+pomExtra := (
         <licenses>
           <license>
             <name>Apache 2</name>
@@ -58,7 +66,7 @@ pomExtra :=
             <name>Nezih Yigitbasi</name>
             <url>http://github.com/nezihyigitbasi</url>
           </developer>
-        </developers>
+        </developers>)
 
 publishArtifact in Test := false
 
